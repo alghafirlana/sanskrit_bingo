@@ -1,0 +1,241 @@
+.app-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 40px;
+  margin-top: 72px;
+
+  transform: scale(0.8);
+  transform-origin: top center;
+  
+}
+
+body{
+  background-image:  
+  linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.7)),
+  url('/bingo-img.png');
+background-size: cover;
+background-position: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap');
+h1{
+ margin: 0 0 20px;
+ text-align: center;
+ font-family: 'Plus Jakarta Sans', sans-serif;
+ font-weight: 800;
+ font-size: 45px;
+ margin-top: -40px;
+ background: linear-gradient(90deg, #74366c,  #006894);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.grid {
+
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: repeat(5, 120px);
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid black;
+    font-size: 22px;
+    margin: auto;
+    border-radius: 8px;
+
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    border: 1px solid grey;
+
+    align-items: center;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;   
+    font-size: 22px;
+    padding: 5px;
+
+    overflow-wrap: anywhere;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.bingo-button {
+    display: block;
+    margin: 20px auto;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 10px;   
+    background-color:#006894;
+    border: solid black 2px;
+    color: white;
+    
+    
+}
+
+.word-box {
+   border: 2px solid black;
+   margin: 20px auto;
+   text-align: center;
+   width: 607px;
+   border-radius: 8px;
+   height: 30px;
+   font-size: 20px;
+   margin-top: -10px;
+   background-color: white;
+}
+
+
+.cell.active{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.cell.wrong{
+
+    background-color: lightcoral;
+}
+
+.english-word{
+
+    font-size: 16px;
+    color: #456078;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.free-cell {
+   background-color: white;
+   color: black;
+}
+
+.top-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+
+}
+
+.title-left {
+    width: 550px;
+    max-width: 100%;
+}
+
+.pattern-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -200px;
+    transform: translateX(70px);
+    transform: translateY(47px);
+
+}
+.pattern-right h4{
+   transform: translateY(-5px);
+   padding-bottom: 1px;
+   white-space: pre;
+}
+
+.pattern-right h6{
+    white-space: pre;
+}
+
+.pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 30px);
+    grid-template-rows: repeat(5, 30px);
+    grid: 3px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-left: -9px;
+    margin-top: -24px;
+    margin-right: -30px;
+    
+}
+
+.pattern-cell{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.pattern-cell.pattern-active{
+    background-color: lightgreen;
+}
+
+.corner-button{
+    text-align: center;
+    margin-top: -20px;
+
+}
+
+.lose-popup{
+   border: 2px solid black;
+   border-radius: 8px;
+   position: relative;
+   top: -130px;
+   right: -110px;
+   align-items:center;
+   justify-content: center;
+   display: flex;
+   /* padding: 15px 20px; */
+   width: 300px;
+   height: 40px;
+   background-color: white;
+}
+
+.lose-popup h2{
+    font-size: 21px;
+    margin: 0;
+    text-align: center;
+}
+
+.win-popup{
+   border: 2px solid black;
+   border-radius: 8px;
+   background-color: white;
+   height: 195px;
+}
+
+.win-popup h2{
+    text-align: center;
+}
+
+.win-popup p{
+    text-align: center;
+}
+
+.win-buttons{
+    display: flex;
+    margin-top: -6px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.nav-instructions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0px 20px;
+  color: white;
+  background: #006894;
+  box-shadow: 0 10px 25px rgba(10, 57, 103, .28);
+  font-weight: 700;
+}

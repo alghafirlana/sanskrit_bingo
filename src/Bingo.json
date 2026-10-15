@@ -1,0 +1,39 @@
+{
+    "title": "CLASSIC BINGO",
+
+    "grid":{
+
+    "rows": 5,
+    "columns": 5
+},
+
+"pattern" : {
+    "four-corner": "Four Corners",
+    "winningCells": [0, 4, 20, 24]
+
+    
+},
+
+"bingoListSa": [ 
+  "सूर्यास्त", "मरुभूमिः", "मेघ", "हिम", "पत्राणि",
+  "गुहा", "सिंहः", "वायुः", "पृथ्वी", "गर्जन",
+  "इक्षुः", "वृक्षः", "पर्वत", "अग्निः", "समुद्रतटम्",
+  "पक्षिणः", "कमलम्", "सूर्य", "वनः", "तारा",
+  "जलप्रपात ", "शशांक", "वृष्टिः", "तरङ्गाः", "वनस्पति",
+  "आकाशः", "ज्वालामुखी", "नदी", "हीरकः", "फलम्",
+  "द्वीपः", "ऋतुः", "मल्लिका", "कर्पासः", "उद्यानम् ",
+  "मूलम्", "काष्ठम्", "सर्पः", "तुलसी", "गोधूमः",
+  "मधु", "बीजम्"
+], 
+"bingoListEn": [
+  "Sunset 🌅", "Desert 🏜️", "Cloud ☁️", "Snow ❄️", "Leaves 🍃",
+  "Cave 🪨", "Lion 🦁", "Wind 💨", "Earth 🌎", "Thunder 🌩️",
+  "Sugarcane 🎋", "Tree 🌳", "Mountain ⛰️", "Fire 🔥", "Beach 🏖️",
+  "Birds 🐦", "Lotus 🪷", "Sun ☀️", "Forest 🌲🌳", "Star ✨",
+  "Waterfall 🏞️🌊", "Moon 🌕", "Rain 🌧️", "Waves 🌊", "Plant 🌱",
+  "Sky 🌤️", "Volcano 🌋", "River 🏞️", "Diamond 💎", "Fruit 🍎",
+  "Island 🏝️", "Season 🍂", "Jasmine 🌼", "Cotton 🧵", "Garden 🌷🌹",
+  "Root 🪾", "Wood 🪵", "Snake 🐍", "Basil 🌿", "Wheat 🌾",
+  "Honey 🍯", "Seed 🫘"
+  ]
+}
