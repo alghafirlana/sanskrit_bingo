@@ -19,7 +19,9 @@ function App() {
     handleCellClicks, 
     showBingoBtn, 
     selectedCells, 
-    currentWordIndex
+    currentWordIndex,
+    wordsLoading,
+    wordsError
    } = useGameLogic();
 
 
@@ -35,7 +37,9 @@ return (
 
   <h1>{title}</h1>
 
-  {/* <img className="Bingo-Img" src='/bingo-img.png' alt="Bingo" /> */}
+  {wordsLoading && <p>Loading words…</p>}
+  {wordsError && <p role="alert">Unable to load game words: {wordsError}</p>}
+
   <div className='word-box'> WORD: &nbsp; {currentWordIndex < shuffledClues.length
       ? bingoListEn[shuffledClues[currentWordIndex]]
       : ""}

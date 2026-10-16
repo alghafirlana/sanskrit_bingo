@@ -1,30 +1,59 @@
 import { useEffect, useState } from "react";
-import puzzle from './Bingo.json'
+import puzzle from './Bingo.json';
+import { fetchBingoWordLists } from './wordFetching';
+
+const shuffledIndexes = (length) =>
+  [...Array(length).keys()].sort(() => Math.random() - 0.5);
 
 export function useGameLogic(){
 
-      
+
 const {
    title, 
    grid, 
-   bingoListSa,
-   bingoListEn, 
    pattern
 
 } = puzzle
 
+const [wordLists, setWordLists] = useState({
+  bingoListSa: [],
+  bingoListEn: [],
+  bingoListAudio: [],
+});
+const { bingoListSa, bingoListEn, bingoListAudio } = wordLists;
+const [wordsLoading, setWordsLoading] = useState(true);
+const [wordsError, setWordsError] = useState("");
 const [selectedCells, setselectedCells] = useState([12]);
 const [currentWordIndex, setcurrentWordIndex] = useState(0);
 const [wrongCell, setwrongCell] = useState(null);
 const [bingoBtn, showBingoBtn] = useState(false);
 const [notBingo, showNotBingo] = useState(false);
-const [shuffledWords] = useState(() =>
-[...Array(bingoListSa.length).keys()].sort(() => Math.random() - 0.5).slice(0,24)
-);
-const [shuffledClues] = useState(() => 
-    [...Array(bingoListEn.length).keys()]
-   .sort(() => Math.random() - 0.5)
-);
+const [shuffledWords, setShuffledWords] = useState([]);
+const [shuffledClues, setShuffledClues] = useState([]);
+
+useEffect(() => {
+  let isCurrent = true;
+
+  fetchBingoWordLists()
+    .then(({ bingoListSa, bingoListEn, bingoListAudio, wordCount }) => {
+      if (!isCurrent) return;
+
+      setWordLists({ bingoListSa, bingoListEn, bingoListAudio });
+      setShuffledWords(shuffledIndexes(wordCount).slice(0, 24));
+      setShuffledClues(shuffledIndexes(wordCount));
+      setWordsLoading(false);
+    })
+    .catch((error) => {
+      console.error("Failed to load words from Firebase:", error);
+      if (!isCurrent) return;
+      setWordsError(error.message || "Unable to load words from Firebase.");
+      setWordsLoading(false);
+    });
+
+  return () => {
+    isCurrent = false;
+  };
+}, []);
 
   const handleBingo =  () => {
   const isWinning = pattern.winningCells.every(
@@ -40,7 +69,7 @@ const [shuffledClues] = useState(() =>
   
 
 useEffect (() => {
-   if (bingoBtn || shuffledClues.length === 0) 
+   if (wordsLoading || bingoBtn || shuffledClues.length === 0) 
    return;
    const timer = setTimeout(() => {
       setcurrentWordIndex(prev =>
@@ -48,7 +77,7 @@ useEffect (() => {
    },5000);
    return() => clearTimeout(timer);  
       
-}, [currentWordIndex, shuffledClues.length, bingoBtn]);
+}, [currentWordIndex, shuffledClues.length, bingoBtn, wordsLoading]);
 
 
     
@@ -63,25 +92,23 @@ useEffect (() => {
 
 
  const playSaAudio = (wordIndex) => {
- 
-   const audio = new Audio(`/audio/${wordIndex}.mp3`);
+   const audio = new Audio(bingoListAudio[wordIndex]);
    audio.play().catch(console.error);
 }
 
 function handleCellClicks(index) {
 
 
-   if(index === 12 || currentWordIndex >= shuffledClues.length) 
+   if(wordsLoading || wordsError || index === 12 || currentWordIndex >= shuffledClues.length) 
       return; 
 
    const wordIndex = index < 12 ? index : index -1; 
+   const clickedWordIndex = shuffledWords[wordIndex];
+   const expectedWordIndex = shuffledClues[currentWordIndex];
+   const isMatch = clickedWordIndex === expectedWordIndex;
 
-
-if (shuffledWords[wordIndex] === shuffledClues[currentWordIndex]) {
-               
-            
-            console.log("Playing:", bingoListSa[shuffledWords[wordIndex]]);
-            playSaAudio(shuffledWords[wordIndex]);
+if (isMatch) {
+            playSaAudio(clickedWordIndex);
 
             setselectedCells((previous)=>
                [...previous, index]
@@ -114,6 +141,8 @@ return {
     handleCellClicks, 
     showBingoBtn, 
     selectedCells, 
-    currentWordIndex
+    currentWordIndex,
+    wordsLoading,
+    wordsError
    };
 }
