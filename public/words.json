@@ -1,0 +1,217 @@
+[
+  {
+    "id": "words_1",
+    "words": [
+      {
+        "wordSan": "सूर्यास्त",
+        "wordEng": "Sunset 🌅",
+        "audio": "/audio/0.mp3"
+      },
+      {
+        "wordSan": "मरुभूमिः",
+        "wordEng": "Desert 🏜️",
+        "audio": "/audio/1.mp3"
+      },
+      {
+        "wordSan": "मेघ",
+        "wordEng": "Cloud ☁️",
+        "audio": "/audio/2.mp3"
+      },
+      {
+        "wordSan": "हिम",
+        "wordEng": "Snow ❄️",
+        "audio": "/audio/3.mp3"
+      },
+      {
+        "wordSan": "पत्राणि",
+        "wordEng": "Leaves 🍃",
+        "audio": "/audio/4.mp3"
+      },
+      {
+        "wordSan": "गुहा",
+        "wordEng": "Cave 🪨",
+        "audio": "/audio/5.mp3"
+      },
+      {
+        "wordSan": "सिंहः",
+        "wordEng": "Lion 🦁",
+        "audio": "/audio/6.mp3"
+      },
+      {
+        "wordSan": "वायुः",
+        "wordEng": "Wind 💨",
+        "audio": "/audio/7.mp3"
+      },
+      {
+        "wordSan": "पृथ्वी",
+        "wordEng": "Earth 🌎",
+        "audio": "/audio/8.mp3"
+      },
+      {
+        "wordSan": "गर्जन",
+        "wordEng": "Thunder 🌩️",
+        "audio": "/audio/9.mp3"
+      },
+      {
+        "wordSan": "इक्षुः",
+        "wordEng": "Sugarcane 🎋",
+        "audio": "/audio/10.mp3"
+      },
+      {
+        "wordSan": "वृक्षः",
+        "wordEng": "Tree 🌳",
+        "audio": "/audio/11.mp3"
+      },
+      {
+        "wordSan": "पर्वत",
+        "wordEng": "Mountain ⛰️",
+        "audio": "/audio/12.mp3"
+      },
+      {
+        "wordSan": "अग्निः",
+        "wordEng": "Fire 🔥",
+        "audio": "/audio/13.mp3"
+      },
+      {
+        "wordSan": "समुद्रतटम्",
+        "wordEng": "Beach 🏖️",
+        "audio": "/audio/14.mp3"
+      },
+      {
+        "wordSan": "पक्षिणः",
+        "wordEng": "Birds 🐦",
+        "audio": "/audio/15.mp3"
+      },
+      {
+        "wordSan": "कमलम्",
+        "wordEng": "Lotus 🪷",
+        "audio": "/audio/16.mp3"
+      },
+      {
+        "wordSan": "सूर्य",
+        "wordEng": "Sun ☀️",
+        "audio": "/audio/17.mp3"
+      },
+      {
+        "wordSan": "वनः",
+        "wordEng": "Forest 🌲🌳",
+        "audio": "/audio/18.mp3"
+      },
+      {
+        "wordSan": "तारा",
+        "wordEng": "Star ✨",
+        "audio": "/audio/19.mp3"
+      },
+      {
+        "wordSan": "जलप्रपात",
+        "wordEng": "Waterfall 🏞️🌊",
+        "audio": "/audio/20.mp3"
+      },
+      {
+        "wordSan": "शशांक",
+        "wordEng": "Moon 🌕",
+        "audio": "/audio/21.mp3"
+      },
+      {
+        "wordSan": "वृष्टिः",
+        "wordEng": "Rain 🌧️",
+        "audio": "/audio/22.mp3"
+      },
+      {
+        "wordSan": "तरङ्गाः",
+        "wordEng": "Waves 🌊",
+        "audio": "/audio/23.mp3"
+      },
+      {
+        "wordSan": "वनस्पति",
+        "wordEng": "Plant 🌱",
+        "audio": "/audio/24.mp3"
+      },
+      {
+        "wordSan": "आकाशः",
+        "wordEng": "Sky 🌤️",
+        "audio": "/audio/25.mp3"
+      },
+      {
+        "wordSan": "ज्वालामुखी",
+        "wordEng": "Volcano 🌋",
+        "audio": "/audio/26.mp3"
+      },
+      {
+        "wordSan": "नदी",
+        "wordEng": "River 🏞️",
+        "audio": "/audio/27.mp3"
+      },
+      {
+        "wordSan": "हीरकः",
+        "wordEng": "Diamond 💎",
+        "audio": "/audio/28.mp3"
+      },
+      {
+        "wordSan": "फलम्",
+        "wordEng": "Fruit 🍎",
+        "audio": "/audio/29.mp3"
+      },
+      {
+        "wordSan": "द्वीपः",
+        "wordEng": "Island 🏝️",
+        "audio": "/audio/30.mp3"
+      },
+      {
+        "wordSan": "ऋतुः",
+        "wordEng": "Season 🍂",
+        "audio": "/audio/31.mp3"
+      },
+      {
+        "wordSan": "मल्लिका",
+        "wordEng": "Jasmine 🌼",
+        "audio": "/audio/32.mp3"
+      },
+      {
+        "wordSan": "कर्पासः",
+        "wordEng": "Cotton 🧵",
+        "audio": "/audio/33.mp3"
+      },
+      {
+        "wordSan": "उद्यानम्",
+        "wordEng": "Garden 🌷🌹",
+        "audio": "/audio/34.mp3"
+      },
+      {
+        "wordSan": "मूलम्",
+        "wordEng": "Root 🪾",
+        "audio": "/audio/35.mp3"
+      },
+      {
+        "wordSan": "काष्ठम्",
+        "wordEng": "Wood 🪵",
+        "audio": "/audio/36.mp3"
+      },
+      {
+        "wordSan": "सर्पः",
+        "wordEng": "Snake 🐍",
+        "audio": "/audio/37.mp3"
+      },
+      {
+        "wordSan": "तुलसी",
+        "wordEng": "Basil 🌿",
+        "audio": "/audio/38.mp3"
+      },
+      {
+        "wordSan": "गोधूमः",
+        "wordEng": "Wheat 🌾",
+        "audio": "/audio/39.mp3"
+      },
+      {
+        "wordSan": "मधु",
+        "wordEng": "Honey 🍯",
+        "audio": "/audio/40.mp3"
+      },
+      {
+        "wordSan": "बीजम्",
+        "wordEng": "Seed 🫘",
+        "audio": "/audio/41.mp3"
+      }
+    ]
+  }
+]
